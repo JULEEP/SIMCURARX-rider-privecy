@@ -1,114 +1,197 @@
 import React from "react";
+import { ShieldCheck, User, Lock, Share2, Settings, Clock, Users, RefreshCw, PhoneCall, RotateCcw } from "lucide-react";
 
 const PrivacyAndPolicy = () => {
+    const sections = [
+        {
+            icon: <User size={28} color="#2E7D32" />,
+            title: "1. Information We Collect",
+            content: (
+                <ul className="ps-3">
+                    <li>First Name and Last Name</li>
+                    <li>Mobile Number and Email Address</li>
+                    <li>Profile Information (updated name, email, profile picture)</li>
+                    <li>Delivery Address and Location Information</li>
+                    <li>Order History and Preferences</li>
+                    <li>Payment Method Details (via secure gateways)</li>
+                </ul>
+            ),
+        },
+        {
+            icon: <Settings size={28} color="#2E7D32" />,
+            title: "2. How We Use Your Information",
+            content: (
+                <ul className="ps-3">
+                    <li>Deliver 100% vegetarian meals to your location</li>
+                    <li>Personalize food recommendations</li>
+                    <li>Support profile management</li>
+                    <li>Improve app performance and user experience</li>
+                    <li>Process payments and send order updates</li>
+                </ul>
+            ),
+        },
+        {
+            icon: <Lock size={28} color="#2E7D32" />,
+            title: "3. How We Protect Your Data",
+            content: (
+                <ul className="ps-3">
+                    <li>Data encryption and secure cloud storage</li>
+                    <li>Trusted third-party payment systems</li>
+                    <li>Strict access control</li>
+                    <li>Regular security monitoring</li>
+                </ul>
+            ),
+        },
+        {
+            icon: <Share2 size={28} color="#2E7D32" />,
+            title: "4. Sharing Your Data",
+            content: (
+                <>
+                    <p>We do <strong>not sell</strong> your personal information.</p>
+                    <ul className="ps-3">
+                        <li>Delivery partners</li>
+                        <li>Payment gateways</li>
+                        <li>Analytics tools</li>
+                        <li>Government authorities when required</li>
+                    </ul>
+                </>
+            ),
+        },
+        {
+            icon: <ShieldCheck size={28} color="#2E7D32" />,
+            title: "5. Your Rights & Choices",
+            content: (
+                <>
+                    <ul className="ps-3">
+                        <li>Update first name, last name, email, and profile picture</li>
+                        <li>Modify saved addresses</li>
+                        <li>Access order history</li>
+                        <li>Request account deletion</li>
+                    </ul>
+                    <p>
+                        Email us at:{" "}
+                        <a href="mailto:support@vegiffyy.com" className="text-success fw-semibold">
+                            support@vegiffyy.com
+                        </a>
+                    </p>
+                </>
+            ),
+        },
+        {
+            icon: <Clock size={28} color="#2E7D32" />,
+            title: "6. Data Retention",
+            content: (
+                <p>
+                    Data is retained only for service operations, customer support, and legal compliance.
+                    You can request deletion any time.
+                </p>
+            ),
+        },
+        {
+            icon: <Users size={28} color="#2E7D32" />,
+            title: "7. Children's Privacy",
+            content: (
+                <p>
+                    Vegiffyy is intended for users aged 16+. We do not knowingly collect data from
+                    children below 16 without parental consent.
+                </p>
+            ),
+        },
+        {
+            icon: <RefreshCw size={28} color="#2E7D32" />,
+            title: "8. Policy Changes",
+            content: (
+                <p>
+                    We may update this policy occasionally. Continued app usage means you accept the
+                    latest version.
+                </p>
+            ),
+        },
+        {
+            icon: <PhoneCall size={28} color="#2E7D32" />,
+            title: "9. Contact Us",
+            content: (
+                <p>
+                    For any queries, contact:{" "}
+                    <a href="mailto:support@vegiffyy.com" className="text-success fw-semibold">
+                        support@vegiffyy.com
+                    </a>
+                </p>
+            ),
+        },
+        {
+            icon: <RotateCcw size={28} color="#2E7D32" />,
+            title: "10. Refund & Cancellation Policy",
+            content: (
+                <ul className="ps-3">
+                    <li>Users can cancel an order within <strong>1 minute</strong> after placing it.</li>
+                    <li>Refunds are processed within <strong>3–4 working days</strong>.</li>
+                    <li>No cancellations allowed once food preparation has started.</li>
+                    <li>Refund timeline depends on the payment provider.</li>
+                </ul>
+            ),
+        },
+    ];
+
     return (
-        <div className="container py-5 px-3" style={{ backgroundColor: "#fff" }}>
-            <div className="row justify-content-center">
-                <div className="col-xl-10 col-lg-11 col-12">
-                    <h1 className="mb-4 text-center fw-bold" style={{ color: "#2b2b2b" }}>
-                        Privacy Policy - Vegiffyy
-                    </h1>
+        <div className="pb-5" style={{ backgroundColor: "#F7FFF8" }}>
+            {/* HEADER */}
+            <div
+                className="text-center py-5 mb-4"
+                style={{
+                    background: "linear-gradient(135deg, #2E7D32, #66BB6A)",
+                    color: "#fff",
+                    borderBottomLeftRadius: "40px",
+                    borderBottomRightRadius: "40px",
+                }}
+            >
+                <h1 className="fw-bold">Vegiffyy - Privacy Policy</h1>
+                <p className="mt-2" style={{ opacity: 0.9 }}>
+                    Your trust is our priority. We keep your data safe & secure.
+                </p>
+            </div>
 
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">1. Information We Collect</h4>
-                        <ul className="ps-3">
-                            <li>Full Name, Phone Number, and Email Address</li>
-                            <li>Delivery Address and Location Information</li>
-                            <li>Order History and Preferences</li>
-                            <li>Payment Method Details (via secure gateways)</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">2. How We Use Your Information</h4>
-                        <ul className="ps-3">
-                            <li>Deliver 100% vegetarian meals to your location</li>
-                            <li>Personalize food recommendations</li>
-                            <li>Improve app performance and user experience</li>
-                            <li>Process payments and provide order updates</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">3. How We Protect Your Data</h4>
-                        <ul className="ps-3">
-                            <li>Data encryption and secure cloud storage</li>
-                            <li>Trusted third-party payment systems</li>
-                            <li>Strict access control for sensitive data</li>
-                            <li>Regular security updates and audits</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">4. Sharing Your Data</h4>
-                        <p>We do <strong>not sell</strong> your data. We may share data only with:</p>
-                        <ul className="ps-3">
-                            <li>Delivery partners (to fulfill your orders)</li>
-                            <li>Payment gateways (to process your transactions)</li>
-                            <li>Analytics tools (for service improvement)</li>
-                            <li>Regulatory bodies (when required by law)</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">5. Your Rights and Choices</h4>
-                        <ul className="ps-3">
-                            <li>View and update profile or address</li>
-                            <li>Access order history</li>
-                            <li>Request account deletion and data removal</li>
-                        </ul>
-                        <p className="mt-2">
-                            To make requests, email us at:{" "}
-                            <a
-                                href="mailto:support@vegiffyy.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-decoration-none text-primary"
+            {/* SECTIONS */}
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-xl-10 col-lg-11 col-12">
+                        {sections.map((sec, i) => (
+                            <div
+                                key={i}
+                                className="p-4 mb-4 shadow-sm animate-section"
+                                style={{
+                                    background: "#ffffff",
+                                    borderRadius: "12px",
+                                    borderLeft: "6px solid #2E7D32",
+                                }}
                             >
-                                support@vegiffyy.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">6. Data Retention</h4>
-                        <p>
-                            We retain data only as needed for service delivery, support, and legal obligations.
-                            You may request deletion at any time.
-                        </p>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">7. Children's Privacy</h4>
-                        <p>
-                            Vegiffyy is intended for users aged 16+. We do not knowingly collect data from children under 16
-                            without parental consent.
-                        </p>
-                    </div>
-
-                    <div className="mb-4">
-                        <h4 className="mb-2 fw-semibold">8. Changes to This Policy</h4>
-                        <p>
-                            We may revise this policy as needed. Continued app usage implies your agreement to the latest version.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="mb-2 fw-semibold">9. Contact Us</h4>
-                        <p>
-                            Questions? Reach out at:{" "}
-                            <a
-                                href="mailto:support@vegiffyy.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-decoration-none text-primary"
-                            >
-                                support@vegiffyy.com
-                            </a>
-                        </p>
+                                <div className="d-flex align-items-center gap-3 mb-3">
+                                    {sec.icon}
+                                    <h4 className="fw-semibold m-0" style={{ color: "#1B5E20" }}>
+                                        {sec.title}
+                                    </h4>
+                                </div>
+                                <div style={{ color: "#2b2b2b" }}>{sec.content}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
+
+            {/* ANIMATION CSS */}
+            <style>{`
+                .animate-section {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    animation: fadeInUp 0.6s ease forwards;
+                }
+                @keyframes fadeInUp {
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            `}</style>
         </div>
     );
 };
